@@ -23,4 +23,5 @@ jobs:
 
     - name: Playbook
       run: |
-        ansible-playbook -i inventory.yml playbook.yml
+        chmod 400 capstone.pem
+        ansible-playbook -i inventory.yml playbook.yml --yes
