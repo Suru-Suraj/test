@@ -9,12 +9,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: my-env
     steps:
     - uses: actions/checkout@v3
     - name: Run playbook
       uses: dawidd6/action-ansible-playbook@v2
       with:
         playbook: playbook.yml
-        directory: ./
         inventory: inventory.yml
